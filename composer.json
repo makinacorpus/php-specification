@@ -1,0 +1,35 @@
+{
+    "name": "makinacorpus/specification",
+    "description": "Simple specification pattern implementation.",
+    "type": "library",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Pierre Rineau",
+            "email": "pierre.rineau@makina-corpus.com"
+        },
+        {
+            "name": "Makina Corpus",
+            "homepage": "https://makina-corpus.com/"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "php": ">= 8.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "phpunit/phpunit": "^9.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "MakinaCorpus\\Specification\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+             "MakinaCorpus\\Specification\\Tests\\": "tests/"
+        }
+    }
+}

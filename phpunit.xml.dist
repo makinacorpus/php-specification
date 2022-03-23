@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/6.5/phpunit.xsd"
+    backupGlobals="false"
+    colors="true"
+    bootstrap="vendor/autoload.php"
+>
+    <php>
+        <ini name="error_reporting" value="-1" />
+        <env name="APP_ENV" value="test" />
+        <env name="SHELL_VERBOSITY" value="0" />
+        <!--
+        <env name="ENABLE_EXT_PGSQL" value="1" />
+        <env name="ENABLE_PDO" value="1" />
+        <env name="ENABLE_SECURITY" value="0" />
+        <env name="PGSQL_HOSTNAME" value="db" />
+        <env name="PGSQL_DATABASE" value="db" />
+        <env name="PGSQL_PASSWORD" value="password" />
+        <env name="PGSQL_USERNAME" value="user" />
+         -->
+    </php>
+
+    <testsuites>
+        <testsuite name="Tests">
+            <directory>tests/</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory>src</directory>
+            <directory>tests</directory>
+            <exclude>
+                <directory>samples</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>
